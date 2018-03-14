@@ -1,0 +1,23 @@
+{
+  "name": "document-management-smc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldonhipolito/document-management-smc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eldonhipolito/document-management-smc/issues"
+  },
+  "homepage": "https://github.com/eldonhipolito/document-management-smc#readme",
+  "dependencies": {
+    "zeppelin-solidity": "1.7.0"
+  }
+}
