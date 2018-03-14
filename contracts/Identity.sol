@@ -2,6 +2,8 @@ pragma solidity 0.4.19;
 
 import 'zeppelin-solidity/contracts/ECRecovery.sol';
 
+import './Document.sol';
+
 contract Identity {
 
     string public name;
@@ -23,6 +25,16 @@ contract Identity {
     // Acts as the sign-in function for the dapp
     function authenticate(bytes32 hash, bytes sig) public constant onlyOwner returns (bool) {
         return ECRecovery.recover(hash, sig) == msg.sender;
+    }
+
+    function verifySig(bytes32 hash, bytes sig) public constant returns (bool) {
+        return ECRecovery.recover(hash, sig) == owner;
+    }
+
+    function signDocument(address docAddress, bytes32 hash, bytes sig) public onlyOwner {
+        Document document = Document(docAddress);
+
+
     }
 
 
