@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.4.18;
 
 import 'zeppelin-solidity/contracts/ECRecovery.sol';
 
@@ -21,7 +21,7 @@ contract Identity is NamedContract, SelfSignatureVerifiable {
     }
 
 
-    function Identity(string _name) public {
+    function Identity(string _name) NamedContract(keccak256("IDENTITY")) public {
         name = _name;
         owner = msg.sender;
     }
@@ -36,12 +36,12 @@ contract Identity is NamedContract, SelfSignatureVerifiable {
     }
 
     function signDocument(address docAddress, bytes32 hash, bytes sig) public onlyOwner {
-        DocumentIntf document = DocumentIntf(docAddress);
+        SignableDocument document = SignableDocument(docAddress);
         document.sign(hash, sig);
     }
 
     //TODO create document
-    function createDocument() {
+    function createDocument() public {
         
     }
 

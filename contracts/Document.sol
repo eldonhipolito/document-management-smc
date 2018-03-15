@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity 0.4.18;
 
 import './SignableDocument.sol';
 
@@ -44,7 +44,7 @@ contract Document is SignableDocument, Ownable {
     event Signed(address signer, uint totalSigned, uint signersCount);
 
     function addSigner(address signer) public onlyOwner {
-        require(keccak256(NamedContract(signer).contractName()) == IDENTITY);
+        require(NamedContract(signer).contractName() == IDENTITY);
 
         uint length = signers.push(signer);
 

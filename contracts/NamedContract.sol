@@ -1,10 +1,10 @@
-pragma solidity ^0.4.0;
+pragma solidity 0.4.18;
 
 contract NamedContract {
 
-    string public contractName;
+    bytes32 public contractName;
 
-    function NamedContract(string _contractName) public{
+    function NamedContract(bytes32 _contractName) public{
         contractName = _contractName;
     }
 

@@ -1,0 +1,205 @@
+{
+  "contractName": "SelfSignatureVerifiable",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "name": "sig",
+          "type": "bytes"
+        }
+      ],
+      "name": "isOwnSignature",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.4.18;\r\n\r\ninterface SelfSignatureVerifiable {\r\n\r\n    function isOwnSignature(bytes32 hash, bytes sig) public constant returns (bool);\r\n\r\n}\r\n",
+  "sourcePath": "C:\\Users\\User.Admin\\Desktop\\sol-workspace\\document-management-smc\\contracts\\SelfSignatureVerifiable.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SelfSignatureVerifiable.sol",
+      "exportedSymbols": {
+        "SelfSignatureVerifiable": [
+          423
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 413,
+        "name": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            423
+          ],
+          "name": "SelfSignatureVerifiable",
+          "scope": 424
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "isOwnSignature",
+              "payable": false,
+              "scope": 423,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "hash",
+                      "scope": 422,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 414,
+                        "name": "ElementaryTypeName",
+                        "src": "94:7:4"
+                      }
+                    ],
+                    "id": 415,
+                    "name": "VariableDeclaration",
+                    "src": "94:12:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "sig",
+                      "scope": 422,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes storage pointer"
+                        },
+                        "id": 416,
+                        "name": "ElementaryTypeName",
+                        "src": "108:5:4"
+                      }
+                    ],
+                    "id": 417,
+                    "name": "VariableDeclaration",
+                    "src": "108:9:4"
+                  }
+                ],
+                "id": 418,
+                "name": "ParameterList",
+                "src": "93:25:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 422,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 419,
+                        "name": "ElementaryTypeName",
+                        "src": "144:4:4"
+                      }
+                    ],
+                    "id": 420,
+                    "name": "VariableDeclaration",
+                    "src": "144:4:4"
+                  }
+                ],
+                "id": 421,
+                "name": "ParameterList",
+                "src": "143:6:4"
+              }
+            ],
+            "id": 422,
+            "name": "FunctionDefinition",
+            "src": "70:80:4"
+          }
+        ],
+        "id": 423,
+        "name": "ContractDefinition",
+        "src": "27:128:4"
+      }
+    ],
+    "id": 424,
+    "name": "SourceUnit",
+    "src": "0:157:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-03-15T02:07:21.360Z"
+}
