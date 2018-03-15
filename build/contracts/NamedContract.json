@@ -1,0 +1,242 @@
+{
+  "contractName": "NamedContract",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "contractName",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_contractName",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806100e98339810160405280805190602001909190505080600081600019169055505060a4806100456000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806375d0c0dc146044575b600080fd5b3415604e57600080fd5b60546072565b60405180826000191660001916815260200191505060405180910390f35b600054815600a165627a7a723058203be4187c6febedc5da29978c9e7f2e8d9840a064d1b4d20a05d5cb404d1016380029",
+  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806375d0c0dc146044575b600080fd5b3415604e57600080fd5b60546072565b60405180826000191660001916815260200191505060405180910390f35b600054815600a165627a7a723058203be4187c6febedc5da29978c9e7f2e8d9840a064d1b4d20a05d5cb404d1016380029",
+  "sourceMap": "27:174:3:-;;;95:99;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;173:13;158:12;:28;;;;;;;95:99;27:174;;;;;;",
+  "deployedSourceMap": "27:174:3:-;;;;;;;;;;;;;;;;;;;;;;;;59:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.4.18;\r\n\r\ncontract NamedContract {\r\n\r\n    bytes32 public contractName;\r\n\r\n    function NamedContract(bytes32 _contractName) public{\r\n        contractName = _contractName;\r\n    }\r\n\r\n\r\n}\r\n",
+  "sourcePath": "C:\\Users\\User.Admin\\Desktop\\sol-workspace\\document-management-smc\\contracts\\NamedContract.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/NamedContract.sol",
+      "exportedSymbols": {
+        "NamedContract": [
+          411
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 398,
+        "name": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            411
+          ],
+          "name": "NamedContract",
+          "scope": 412
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "contractName",
+              "scope": 411,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes32",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bytes32",
+                  "type": "bytes32"
+                },
+                "id": 399,
+                "name": "ElementaryTypeName",
+                "src": "59:7:3"
+              }
+            ],
+            "id": 400,
+            "name": "VariableDeclaration",
+            "src": "59:27:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "NamedContract",
+              "payable": false,
+              "scope": 411,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_contractName",
+                      "scope": 410,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 401,
+                        "name": "ElementaryTypeName",
+                        "src": "118:7:3"
+                      }
+                    ],
+                    "id": 402,
+                    "name": "VariableDeclaration",
+                    "src": "118:21:3"
+                  }
+                ],
+                "id": 403,
+                "name": "ParameterList",
+                "src": "117:23:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 404,
+                "name": "ParameterList",
+                "src": "147:0:3"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 400,
+                              "type": "bytes32",
+                              "value": "contractName"
+                            },
+                            "id": 405,
+                            "name": "Identifier",
+                            "src": "158:12:3"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 402,
+                              "type": "bytes32",
+                              "value": "_contractName"
+                            },
+                            "id": 406,
+                            "name": "Identifier",
+                            "src": "173:13:3"
+                          }
+                        ],
+                        "id": 407,
+                        "name": "Assignment",
+                        "src": "158:28:3"
+                      }
+                    ],
+                    "id": 408,
+                    "name": "ExpressionStatement",
+                    "src": "158:28:3"
+                  }
+                ],
+                "id": 409,
+                "name": "Block",
+                "src": "147:47:3"
+              }
+            ],
+            "id": 410,
+            "name": "FunctionDefinition",
+            "src": "95:99:3"
+          }
+        ],
+        "id": 411,
+        "name": "ContractDefinition",
+        "src": "27:174:3"
+      }
+    ],
+    "id": 412,
+    "name": "SourceUnit",
+    "src": "0:203:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-03-15T02:07:21.360Z"
+}
