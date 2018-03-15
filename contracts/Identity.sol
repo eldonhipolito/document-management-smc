@@ -2,9 +2,13 @@ pragma solidity 0.4.19;
 
 import 'zeppelin-solidity/contracts/ECRecovery.sol';
 
-import './Document.sol';
+import './SignableDocument.sol';
+import './NamedContract.sol';
 
-contract Identity {
+import './SelfSignatureVerifiable.sol';
+
+
+contract Identity is NamedContract, SelfSignatureVerifiable {
 
     string public name;
 
@@ -27,16 +31,22 @@ contract Identity {
         return ECRecovery.recover(hash, sig) == msg.sender;
     }
 
-    function verifySig(bytes32 hash, bytes sig) public constant returns (bool) {
+    function isOwnSignature(bytes32 hash, bytes sig) public constant returns (bool) {
         return ECRecovery.recover(hash, sig) == owner;
     }
 
     function signDocument(address docAddress, bytes32 hash, bytes sig) public onlyOwner {
-        Document document = Document(docAddress);
+        DocumentIntf document = DocumentIntf(docAddress);
+        document.sign(hash, sig);
+    }
 
-
+    //TODO create document
+    function createDocument() {
+        
     }
 
 
 
+
 }
+
