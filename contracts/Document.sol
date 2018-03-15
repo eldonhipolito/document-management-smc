@@ -11,6 +11,7 @@ import './SelfSignatureVerifiable.sol';
 contract Document is SignableDocument, Ownable {
 
 
+    uint256 public id;
 
     string public docName;
 
@@ -28,15 +29,10 @@ contract Document is SignableDocument, Ownable {
 
     bytes32 public constant IDENTITY = 0x377799b22fba826cf24c3f07e6731c67676765addcee33415a2c80d453d4ed6e;
 
-    function Document(string _docName, bytes32 _checksum) public {
+    function Document(uint256 _id, string _docName, bytes32 _checksum, address _owner) public {
         docName = _docName;
         checksum = _checksum;
-        owner = msg.sender;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner);
-        _;
+        owner = _owner;
     }
 
     event SignerAdded(address signer, uint signersCount);
