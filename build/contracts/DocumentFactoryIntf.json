@@ -1,27 +1,31 @@
 {
-  "contractName": "SelfSignatureVerifiable",
+  "contractName": "DocumentFactoryIntf",
   "abi": [
     {
-      "constant": true,
+      "constant": false,
       "inputs": [
         {
-          "name": "hash",
-          "type": "bytes32"
+          "name": "_docName",
+          "type": "string"
         },
         {
-          "name": "sig",
-          "type": "bytes"
+          "name": "_checksum",
+          "type": "bytes32"
         }
       ],
-      "name": "isOwnSignature",
+      "name": "createDocument",
       "outputs": [
         {
           "name": "",
-          "type": "bool"
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "address"
         }
       ],
       "payable": false,
-      "stateMutability": "view",
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
@@ -29,14 +33,14 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.4.18;\r\n\r\ninterface SelfSignatureVerifiable {\r\n\r\n    function isOwnSignature(bytes32 hash, bytes sig) public constant returns (bool);\r\n\r\n}\r\n",
-  "sourcePath": "C:\\Users\\User.Admin\\Desktop\\sol-workspace\\document-management-smc\\contracts\\SelfSignatureVerifiable.sol",
+  "source": "pragma solidity ^0.4.0;\r\n\r\ninterface DocumentFactoryIntf {\r\n    function createDocument(string _docName, bytes32 _checksum) public returns(uint256, address);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\User.Admin\\Desktop\\sol-workspace\\document-management-smc\\contracts\\DocumentFactoryIntf.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SelfSignatureVerifiable.sol",
+      "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/DocumentFactoryIntf.sol",
       "exportedSymbols": {
-        "SelfSignatureVerifiable": [
-          470
+        "DocumentFactoryIntf": [
+          283
         ]
       }
     },
@@ -45,13 +49,14 @@
         "attributes": {
           "literals": [
             "solidity",
+            "^",
             "0.4",
-            ".18"
+            ".0"
           ]
         },
-        "id": 460,
+        "id": 271,
         "name": "PragmaDirective",
-        "src": "0:23:5"
+        "src": "0:23:2"
       },
       {
         "attributes": {
@@ -65,25 +70,25 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            470
+            283
           ],
-          "name": "SelfSignatureVerifiable",
-          "scope": 471
+          "name": "DocumentFactoryIntf",
+          "scope": 284
         },
         "children": [
           {
             "attributes": {
               "body": null,
-              "constant": true,
+              "constant": false,
               "implemented": false,
               "isConstructor": false,
               "modifiers": [
                 null
               ],
-              "name": "isOwnSignature",
+              "name": "createDocument",
               "payable": false,
-              "scope": 470,
-              "stateMutability": "view",
+              "scope": 283,
+              "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
             },
@@ -93,8 +98,34 @@
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "hash",
-                      "scope": 469,
+                      "name": "_docName",
+                      "scope": 282,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 272,
+                        "name": "ElementaryTypeName",
+                        "src": "88:6:2"
+                      }
+                    ],
+                    "id": 273,
+                    "name": "VariableDeclaration",
+                    "src": "88:15:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_checksum",
+                      "scope": 282,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -107,45 +138,19 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 461,
+                        "id": 274,
                         "name": "ElementaryTypeName",
-                        "src": "94:7:5"
+                        "src": "105:7:2"
                       }
                     ],
-                    "id": 462,
+                    "id": 275,
                     "name": "VariableDeclaration",
-                    "src": "94:12:5"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "sig",
-                      "scope": 469,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bytes memory",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bytes",
-                          "type": "bytes storage pointer"
-                        },
-                        "id": 463,
-                        "name": "ElementaryTypeName",
-                        "src": "108:5:5"
-                      }
-                    ],
-                    "id": 464,
-                    "name": "VariableDeclaration",
-                    "src": "108:9:5"
+                    "src": "105:17:2"
                   }
                 ],
-                "id": 465,
+                "id": 276,
                 "name": "ParameterList",
-                "src": "93:25:5"
+                "src": "87:36:2"
               },
               {
                 "children": [
@@ -153,47 +158,73 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 469,
+                      "scope": 282,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "bool",
+                      "type": "uint256",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "bool",
-                          "type": "bool"
+                          "name": "uint256",
+                          "type": "uint256"
                         },
-                        "id": 466,
+                        "id": 277,
                         "name": "ElementaryTypeName",
-                        "src": "144:4:5"
+                        "src": "139:7:2"
                       }
                     ],
-                    "id": 467,
+                    "id": 278,
                     "name": "VariableDeclaration",
-                    "src": "144:4:5"
+                    "src": "139:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 282,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 279,
+                        "name": "ElementaryTypeName",
+                        "src": "148:7:2"
+                      }
+                    ],
+                    "id": 280,
+                    "name": "VariableDeclaration",
+                    "src": "148:7:2"
                   }
                 ],
-                "id": 468,
+                "id": 281,
                 "name": "ParameterList",
-                "src": "143:6:5"
+                "src": "138:18:2"
               }
             ],
-            "id": 469,
+            "id": 282,
             "name": "FunctionDefinition",
-            "src": "70:80:5"
+            "src": "64:93:2"
           }
         ],
-        "id": 470,
+        "id": 283,
         "name": "ContractDefinition",
-        "src": "27:128:5"
+        "src": "27:133:2"
       }
     ],
-    "id": 471,
+    "id": 284,
     "name": "SourceUnit",
-    "src": "0:157:5"
+    "src": "0:162:2"
   },
   "compiler": {
     "name": "solc",
@@ -201,5 +232,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-15T04:58:56.211Z"
+  "updatedAt": "2018-03-15T04:58:56.196Z"
 }

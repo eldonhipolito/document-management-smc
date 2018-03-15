@@ -7,12 +7,15 @@ import './NamedContract.sol';
 
 import './SelfSignatureVerifiable.sol';
 
+import './DocumentFactoryIntf.sol';
 
 contract Identity is NamedContract, SelfSignatureVerifiable {
 
     string public name;
 
     address public owner;
+
+    address public docFacAdd;
 
 
     modifier onlyOwner() {
@@ -21,9 +24,13 @@ contract Identity is NamedContract, SelfSignatureVerifiable {
     }
 
 
-    function Identity(string _name) NamedContract(keccak256("IDENTITY")) public {
+    event DocumentCreated(uint256 id, address document);
+
+
+    function Identity(string _name, address _docFacAdd) NamedContract(keccak256("IDENTITY")) public {
         name = _name;
         owner = msg.sender;
+        docFacAdd = _docFacAdd;
     }
 
     // Acts as the sign-in function for the dapp
@@ -40,9 +47,14 @@ contract Identity is NamedContract, SelfSignatureVerifiable {
         document.sign(hash, sig);
     }
 
-    //TODO create document
-    function createDocument() public {
-        
+
+    function createDocument(string _docName, bytes32 _checksum) public {
+        uint256 id = 0;
+        address docAdd = address(0);
+
+        (id, docAdd) = DocumentFactoryIntf(docFacAdd).createDocument(_docName, _checksum);
+
+        DocumentCreated(id, docAdd);
     }
 
 

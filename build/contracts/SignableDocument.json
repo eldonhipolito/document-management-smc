@@ -31,7 +31,7 @@
       "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SignableDocument.sol",
       "exportedSymbols": {
         "SignableDocument": [
-          433
+          480
         ]
       }
     },
@@ -44,9 +44,9 @@
             ".18"
           ]
         },
-        "id": 425,
+        "id": 472,
         "name": "PragmaDirective",
-        "src": "0:23:5"
+        "src": "0:23:6"
       },
       {
         "attributes": {
@@ -60,10 +60,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            433
+            480
           ],
           "name": "SignableDocument",
-          "scope": 434
+          "scope": 481
         },
         "children": [
           {
@@ -77,7 +77,7 @@
               ],
               "name": "sign",
               "payable": false,
-              "scope": 433,
+              "scope": 480,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -89,7 +89,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "hash",
-                      "scope": 432,
+                      "scope": 479,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -102,20 +102,20 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 426,
+                        "id": 473,
                         "name": "ElementaryTypeName",
-                        "src": "77:7:5"
+                        "src": "77:7:6"
                       }
                     ],
-                    "id": 427,
+                    "id": 474,
                     "name": "VariableDeclaration",
-                    "src": "77:12:5"
+                    "src": "77:12:6"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "sig",
-                      "scope": 432,
+                      "scope": 479,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes memory",
@@ -128,19 +128,19 @@
                           "name": "bytes",
                           "type": "bytes storage pointer"
                         },
-                        "id": 428,
+                        "id": 475,
                         "name": "ElementaryTypeName",
-                        "src": "91:5:5"
+                        "src": "91:5:6"
                       }
                     ],
-                    "id": 429,
+                    "id": 476,
                     "name": "VariableDeclaration",
-                    "src": "91:9:5"
+                    "src": "91:9:6"
                   }
                 ],
-                "id": 430,
+                "id": 477,
                 "name": "ParameterList",
-                "src": "76:25:5"
+                "src": "76:25:6"
               },
               {
                 "attributes": {
@@ -149,24 +149,24 @@
                   ]
                 },
                 "children": [],
-                "id": 431,
+                "id": 478,
                 "name": "ParameterList",
-                "src": "108:0:5"
+                "src": "108:0:6"
               }
             ],
-            "id": 432,
+            "id": 479,
             "name": "FunctionDefinition",
-            "src": "63:46:5"
+            "src": "63:46:6"
           }
         ],
-        "id": 433,
+        "id": 480,
         "name": "ContractDefinition",
-        "src": "27:89:5"
+        "src": "27:89:6"
       }
     ],
-    "id": 434,
+    "id": 481,
     "name": "SourceUnit",
-    "src": "0:118:5"
+    "src": "0:118:6"
   },
   "compiler": {
     "name": "solc",
@@ -174,5 +174,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-03-15T02:07:21.360Z"
+  "updatedAt": "2018-03-15T04:58:56.211Z"
 }
