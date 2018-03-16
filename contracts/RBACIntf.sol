@@ -1,8 +1,7 @@
-pragma solidity 0.4.18;
+pragma solidity ^0.4.18;
 
 
-
-interface RolesDefinitionIntf {
+interface RBACIntf {
 
     function checkRole(address addr, string roleName) view public;
 
