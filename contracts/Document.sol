@@ -8,6 +8,7 @@ import './NamedContract.sol';
 
 import './SelfSignatureVerifiable.sol';
 
+
 contract Document is SignableDocument, Ownable {
 
 
@@ -16,6 +17,8 @@ contract Document is SignableDocument, Ownable {
     string public docName;
 
     bytes32 public checksum;
+
+
 
     struct Signatory {
         address signer;
@@ -35,9 +38,7 @@ contract Document is SignableDocument, Ownable {
         owner = _owner;
     }
 
-    event SignerAdded(address signer, uint signersCount);
-
-    event Signed(address signer, uint totalSigned, uint signersCount);
+    event SignerAdded(address owner, address signer, uint signersCount);
 
     function addSigner(address signer) public onlyOwner {
         require(NamedContract(signer).contractName() == IDENTITY);
@@ -47,14 +48,14 @@ contract Document is SignableDocument, Ownable {
         SignerAdded(signer, length);
     }
 
-    function sign(bytes32 hash, bytes sig) public {
+    function sign(bytes32 hash, bytes sig) public returns (address signer, uint totalSigned, uint signersCount) {
         require(isSigner(msg.sender));
         require(!hasSigned(msg.sender));
         require(SelfSignatureVerifiable(msg.sender).isOwnSignature(hash, sig));
 
         uint totalSigned = signatures.push(Signatory(msg.sender, hash, sig));
 
-        Signed(msg.sender, totalSigned, signers.length);
+        return (msg.sender, totalSigned, signers.length);
     }
 
 
