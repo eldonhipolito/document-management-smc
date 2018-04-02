@@ -4,12 +4,8 @@ import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
 import './RBACIntf.sol';
 
-import './NamedContract.sol';
-
 contract Identities is Ownable {
 
-
-    address public rolesDefAdd;
 
     // Mapping of user address to identity
     mapping(address => address) public identities;
@@ -30,7 +26,7 @@ contract Identities is Ownable {
 
     bytes32 constant IDENTITY = 0x377799b22fba826cf24c3f07e6731c67676765addcee33415a2c80d453d4ed6e;
 
-    function Identities(address _rbacAddress){
+    function Identities(address _rbacAddress) public {
         rbacAddress = RBACIntf(_rbacAddress);
     }
 
@@ -75,23 +71,21 @@ contract Identities is Ownable {
     }
 
 
-    function hasRole(address addr, string roleName) view public returns (bool) {
+    function hasRole(address addr, string roleName) public view returns (bool) {
         return rbacAddress.hasRole(addr, roleName);
     }
 
-    function checkRole(address addr, string roleName) view public {
+    function checkRole(address addr, string roleName) public view {
         rbacAddress.checkRole(addr, roleName);
     }
 
-    function adminAddRole(address addr, string roleName) public onlyAdmin {
-        if (ROLE_ADMIN_KCK != keccak256(roleName)) {
-            checkRole(addr, ROLE_VERIFIED_IDENTITY);
-        }
+    function adminAddRole(address addr, string roleName) external onlyAdmin {
+        checkRole(addr, ROLE_VERIFIED_IDENTITY);
 
         rbacAddress.adminAddRole(addr, roleName);
     }
 
-    function adminRemoveRole(address addr, string roleName) public onlyAdmin {
+    function adminRemoveRole(address addr, string roleName) external onlyAdmin {
         require(ROLE_VERIFIED_IDENTITY_KCK != keccak256(roleName));
         rbacAddress.adminRemoveRole(addr, roleName);
     }
