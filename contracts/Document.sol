@@ -1,14 +1,19 @@
-pragma solidity 0.4.18;
+pragma solidity ^0.4.18;
 
 import './SignableDocument.sol';
 
 import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
-import './NamedContract.sol';
-
 import './SelfSignatureVerifiable.sol';
 
-contract Document is SignableDocument, Ownable {
+
+contract Document is Ownable, SignableDocument {
+
+    struct Signatory {
+        address signer;
+        bytes32 hash;
+        bytes signature;
+    }
 
 
     uint256 public id;
@@ -17,17 +22,14 @@ contract Document is SignableDocument, Ownable {
 
     bytes32 public checksum;
 
-    struct Signatory {
-        address signer;
-        bytes32 hash;
-        bytes signature;
-    }
-
     address[] public signers;
 
     Signatory[] public signatures;
 
-    bytes32 public constant IDENTITY = 0x377799b22fba826cf24c3f07e6731c67676765addcee33415a2c80d453d4ed6e;
+    event DocumentSigned(address docAddress, address signer, uint totalSigned, uint signersCount);
+
+    event SignerAdded(address docAddress, address owner, address signer, uint signersCount);
+
 
     function Document(uint256 _id, string _docName, bytes32 _checksum, address _owner) public {
         docName = _docName;
@@ -35,28 +37,21 @@ contract Document is SignableDocument, Ownable {
         owner = _owner;
     }
 
-    event SignerAdded(address signer, uint signersCount);
-
-    event Signed(address signer, uint totalSigned, uint signersCount);
-
-    function addSigner(address signer) public onlyOwner {
-        require(NamedContract(signer).contractName() == IDENTITY);
-
+    function addSigner(address signer) external onlyOwner {
         uint length = signers.push(signer);
 
-        SignerAdded(signer, length);
+        SignerAdded(address(this), msg.sender, signer, length);
     }
 
-    function sign(bytes32 hash, bytes sig) public {
+    function sign(bytes32 hash, bytes sig) external {
         require(isSigner(msg.sender));
         require(!hasSigned(msg.sender));
         require(SelfSignatureVerifiable(msg.sender).isOwnSignature(hash, sig));
 
         uint totalSigned = signatures.push(Signatory(msg.sender, hash, sig));
 
-        Signed(msg.sender, totalSigned, signers.length);
+        DocumentSigned(address(this), msg.sender, totalSigned, signatures.length);
     }
-
 
     function isSigner(address signerAddress) internal view returns (bool){
         for (uint i = 0; i < signers.length; i++) {
