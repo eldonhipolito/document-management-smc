@@ -38,14 +38,14 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.4.18;\r\n\r\ninterface SignableDocument {\r\n\r\n    function sign(bytes32 hash, bytes sig) external;\r\n\r\n    function addSigner(address signer) external;\r\n\r\n\r\n}\r\n",
+  "source": "pragma solidity ^0.4.18;\r\n\r\ninterface SignableDocument {\r\n\r\n    function sign(bytes32 hash, bytes sig) external;\r\n\r\n    function addSigner(address signer) external;\r\n\r\n}\r\n",
   "sourcePath": "C:\\Users\\User.Admin\\Desktop\\sol-workspace\\document-management-smc\\contracts\\SignableDocument.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SignableDocument.sol",
       "exportedSymbols": {
         "SignableDocument": [
-          250
+          1114
         ]
       }
     },
@@ -59,9 +59,9 @@
             ".18"
           ]
         },
-        "id": 237,
+        "id": 1101,
         "name": "PragmaDirective",
-        "src": "0:24:2"
+        "src": "0:24:8"
       },
       {
         "attributes": {
@@ -75,10 +75,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            250
+            1114
           ],
           "name": "SignableDocument",
-          "scope": 251
+          "scope": 1115
         },
         "children": [
           {
@@ -92,7 +92,7 @@
               ],
               "name": "sign",
               "payable": false,
-              "scope": 250,
+              "scope": 1114,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -104,7 +104,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "hash",
-                      "scope": 244,
+                      "scope": 1108,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -117,20 +117,20 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 238,
+                        "id": 1102,
                         "name": "ElementaryTypeName",
-                        "src": "78:7:2"
+                        "src": "78:7:8"
                       }
                     ],
-                    "id": 239,
+                    "id": 1103,
                     "name": "VariableDeclaration",
-                    "src": "78:12:2"
+                    "src": "78:12:8"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "sig",
-                      "scope": 244,
+                      "scope": 1108,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes calldata",
@@ -143,19 +143,19 @@
                           "name": "bytes",
                           "type": "bytes storage pointer"
                         },
-                        "id": 240,
+                        "id": 1104,
                         "name": "ElementaryTypeName",
-                        "src": "92:5:2"
+                        "src": "92:5:8"
                       }
                     ],
-                    "id": 241,
+                    "id": 1105,
                     "name": "VariableDeclaration",
-                    "src": "92:9:2"
+                    "src": "92:9:8"
                   }
                 ],
-                "id": 242,
+                "id": 1106,
                 "name": "ParameterList",
-                "src": "77:25:2"
+                "src": "77:25:8"
               },
               {
                 "attributes": {
@@ -164,14 +164,14 @@
                   ]
                 },
                 "children": [],
-                "id": 243,
+                "id": 1107,
                 "name": "ParameterList",
-                "src": "111:0:2"
+                "src": "111:0:8"
               }
             ],
-            "id": 244,
+            "id": 1108,
             "name": "FunctionDefinition",
-            "src": "64:48:2"
+            "src": "64:48:8"
           },
           {
             "attributes": {
@@ -184,7 +184,7 @@
               ],
               "name": "addSigner",
               "payable": false,
-              "scope": 250,
+              "scope": 1114,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -196,7 +196,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "signer",
-                      "scope": 249,
+                      "scope": 1113,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -209,19 +209,19 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 245,
+                        "id": 1109,
                         "name": "ElementaryTypeName",
-                        "src": "139:7:2"
+                        "src": "139:7:8"
                       }
                     ],
-                    "id": 246,
+                    "id": 1110,
                     "name": "VariableDeclaration",
-                    "src": "139:14:2"
+                    "src": "139:14:8"
                   }
                 ],
-                "id": 247,
+                "id": 1111,
                 "name": "ParameterList",
-                "src": "138:16:2"
+                "src": "138:16:8"
               },
               {
                 "attributes": {
@@ -230,24 +230,24 @@
                   ]
                 },
                 "children": [],
-                "id": 248,
+                "id": 1112,
                 "name": "ParameterList",
-                "src": "163:0:2"
+                "src": "163:0:8"
               }
             ],
-            "id": 249,
+            "id": 1113,
             "name": "FunctionDefinition",
-            "src": "120:44:2"
+            "src": "120:44:8"
           }
         ],
-        "id": 250,
+        "id": 1114,
         "name": "ContractDefinition",
-        "src": "28:143:2"
+        "src": "28:141:8"
       }
     ],
-    "id": 251,
+    "id": 1115,
     "name": "SourceUnit",
-    "src": "0:173:2"
+    "src": "0:171:8"
   },
   "compiler": {
     "name": "solc",
@@ -255,5 +255,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-03T01:57:15.453Z"
+  "updatedAt": "2018-04-03T03:29:25.379Z"
 }

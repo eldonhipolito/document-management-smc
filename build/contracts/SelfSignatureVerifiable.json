@@ -36,7 +36,7 @@
       "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SelfSignatureVerifiable.sol",
       "exportedSymbols": {
         "SelfSignatureVerifiable": [
-          235
+          1099
         ]
       }
     },
@@ -50,9 +50,9 @@
             ".18"
           ]
         },
-        "id": 225,
+        "id": 1089,
         "name": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:7"
       },
       {
         "attributes": {
@@ -66,10 +66,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            235
+            1099
           ],
           "name": "SelfSignatureVerifiable",
-          "scope": 236
+          "scope": 1100
         },
         "children": [
           {
@@ -83,7 +83,7 @@
               ],
               "name": "isOwnSignature",
               "payable": false,
-              "scope": 235,
+              "scope": 1099,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -95,7 +95,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "hash",
-                      "scope": 234,
+                      "scope": 1098,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -108,20 +108,20 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 226,
+                        "id": 1090,
                         "name": "ElementaryTypeName",
-                        "src": "95:7:1"
+                        "src": "95:7:7"
                       }
                     ],
-                    "id": 227,
+                    "id": 1091,
                     "name": "VariableDeclaration",
-                    "src": "95:12:1"
+                    "src": "95:12:7"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "sig",
-                      "scope": 234,
+                      "scope": 1098,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes calldata",
@@ -134,19 +134,19 @@
                           "name": "bytes",
                           "type": "bytes storage pointer"
                         },
-                        "id": 228,
+                        "id": 1092,
                         "name": "ElementaryTypeName",
-                        "src": "109:5:1"
+                        "src": "109:5:7"
                       }
                     ],
-                    "id": 229,
+                    "id": 1093,
                     "name": "VariableDeclaration",
-                    "src": "109:9:1"
+                    "src": "109:9:7"
                   }
                 ],
-                "id": 230,
+                "id": 1094,
                 "name": "ParameterList",
-                "src": "94:25:1"
+                "src": "94:25:7"
               },
               {
                 "children": [
@@ -154,7 +154,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 234,
+                      "scope": 1098,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -167,34 +167,34 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 231,
+                        "id": 1095,
                         "name": "ElementaryTypeName",
-                        "src": "143:4:1"
+                        "src": "143:4:7"
                       }
                     ],
-                    "id": 232,
+                    "id": 1096,
                     "name": "VariableDeclaration",
-                    "src": "143:4:1"
+                    "src": "143:4:7"
                   }
                 ],
-                "id": 233,
+                "id": 1097,
                 "name": "ParameterList",
-                "src": "142:6:1"
+                "src": "142:6:7"
               }
             ],
-            "id": 234,
+            "id": 1098,
             "name": "FunctionDefinition",
-            "src": "71:78:1"
+            "src": "71:78:7"
           }
         ],
-        "id": 235,
+        "id": 1099,
         "name": "ContractDefinition",
-        "src": "28:126:1"
+        "src": "28:126:7"
       }
     ],
-    "id": 236,
+    "id": 1100,
     "name": "SourceUnit",
-    "src": "0:156:1"
+    "src": "0:156:7"
   },
   "compiler": {
     "name": "solc",
@@ -202,5 +202,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-03T01:57:15.453Z"
+  "updatedAt": "2018-04-03T03:29:25.379Z"
 }

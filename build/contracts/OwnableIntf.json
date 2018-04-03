@@ -27,7 +27,7 @@
       "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/OwnableIntf.sol",
       "exportedSymbols": {
         "OwnableIntf": [
-          1083
+          1087
         ]
       }
     },
@@ -41,7 +41,7 @@
             ".18"
           ]
         },
-        "id": 1077,
+        "id": 1081,
         "name": "PragmaDirective",
         "src": "0:24:6"
       },
@@ -57,10 +57,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            1083
+            1087
           ],
           "name": "OwnableIntf",
-          "scope": 1084
+          "scope": 1088
         },
         "children": [
           {
@@ -74,7 +74,7 @@
               ],
               "name": "transferOwnership",
               "payable": false,
-              "scope": 1083,
+              "scope": 1087,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -86,7 +86,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "newOwner",
-                      "scope": 1082,
+                      "scope": 1086,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -99,17 +99,17 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 1078,
+                        "id": 1082,
                         "name": "ElementaryTypeName",
                         "src": "84:7:6"
                       }
                     ],
-                    "id": 1079,
+                    "id": 1083,
                     "name": "VariableDeclaration",
                     "src": "84:16:6"
                   }
                 ],
-                "id": 1080,
+                "id": 1084,
                 "name": "ParameterList",
                 "src": "83:18:6"
               },
@@ -120,22 +120,22 @@
                   ]
                 },
                 "children": [],
-                "id": 1081,
+                "id": 1085,
                 "name": "ParameterList",
                 "src": "108:0:6"
               }
             ],
-            "id": 1082,
+            "id": 1086,
             "name": "FunctionDefinition",
             "src": "57:52:6"
           }
         ],
-        "id": 1083,
+        "id": 1087,
         "name": "ContractDefinition",
         "src": "28:86:6"
       }
     ],
-    "id": 1084,
+    "id": 1088,
     "name": "SourceUnit",
     "src": "0:116:6"
   },
@@ -145,5 +145,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-03T01:56:38.201Z"
+  "updatedAt": "2018-04-03T03:29:25.379Z"
 }
