@@ -19,21 +19,21 @@ contract Documents is Ownable {
 
     uint256 public count;
 
-    address public identitiesAdd;
+    IdentitiesIntf public identitiesAdd;
 
     event DocumentCreated(uint256 id, address document, address creator);
 
     event DocumentOwnershipTransferred(uint256 documentId, address previousOwner, address newOwner);
 
     function Documents(address _identitiesAdd) public {
-        identitiesAdd = _identitiesAdd;
+        identitiesAdd = IdentitiesIntf(_identitiesAdd);
     }
 
     function createDocument(string _docName, bytes32 _checksum) external {
-        IdentitiesIntf(identitiesAdd).checkCreatorRole(msg.sender);
+        identitiesAdd.checkCreatorRole(msg.sender);
         count++;
         address doc = new Document(count, _docName, _checksum, msg.sender);
-        documents[msg.sender][count] = doc;
+        documents[count] = doc;
         documentOwnership[msg.sender].push(count);
 
         DocumentCreated(count, doc, msg.sender);
@@ -41,12 +41,12 @@ contract Documents is Ownable {
 
     function transferDocumentOwnership(uint256 documentId, address newOwner) external {
         require(documents[documentId] != address(0));
-        uint ownedNdx = ownedDocIndex(documentId, msg.sender);
+        int ownedNdx = ownedDocIndex(documentId, msg.sender);
         require(ownedNdx != -1);
         // Ensures that address of new owner has the rights to own the document
         identitiesAdd.checkCreatorRole(newOwner);
 
-        removeDocOwnership(ownedNdx);
+        removeDocOwnership(uint(ownedNdx));
         OwnableIntf(documents[documentId]).transferOwnership(newOwner);
 
         DocumentOwnershipTransferred(documentId, msg.sender, newOwner);
@@ -54,12 +54,12 @@ contract Documents is Ownable {
 
     }
 
-    function ownedDocIndex(uint256 docId, address addr) internal view returns (bool) {
+    function ownedDocIndex(uint256 docId, address addr) internal view returns (int) {
         uint256[] memory owned = documentOwnership[addr];
 
         for(uint i = 0; i < owned.length; i++) {
             if(owned[i] == docId) {
-                return i;
+                return int(i);
             }
         }
 
@@ -82,7 +82,7 @@ contract Documents is Ownable {
     }
 
     function setRolesDefAdd(address _identitiesAdd) public onlyOwner {
-        identitiesAdd = _identitiesAdd;
+        identitiesAdd = IdentitiesIntf(_identitiesAdd);
     }
 
 

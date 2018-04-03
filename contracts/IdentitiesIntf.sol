@@ -10,14 +10,14 @@ interface IdentitiesIntf {
 
     function setRBACAddress(address _rbacAddress) public;
 
-    function hasRole(address _identity, string roleName) view public returns (bool);
+    function hasRole(address addr, string roleName) view public returns (bool);
 
-    function checkRole(address _identity, string roleName) view public;
+    function checkRole(address addr, string roleName) view public;
 
-    function checkVerifiedRole(address _identity) view public;
+    function checkVerifiedRole(address addr) view public;
 
-    function checkSignerRole(address _identity) view public;
+    function checkSignerRole(address addr) view public;
 
-    function checkCreatorRole(address _identity) view public;
+    function checkCreatorRole(address addr) view public;
 
 }

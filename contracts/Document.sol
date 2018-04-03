@@ -32,6 +32,7 @@ contract Document is Ownable, SignableDocument {
 
 
     function Document(uint256 _id, string _docName, bytes32 _checksum, address _owner) public {
+        id = _id;
         docName = _docName;
         checksum = _checksum;
         owner = _owner;
