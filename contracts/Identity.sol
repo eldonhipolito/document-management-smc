@@ -9,6 +9,8 @@ import './IdentitiesIntf.sol';
 
 contract Identity is SelfSignatureVerifiable {
 
+    string public userId;
+
     string public name;
 
     address public owner;
@@ -22,7 +24,8 @@ contract Identity is SelfSignatureVerifiable {
         _;
     }
 
-    function Identity(string _name, address _docsAdd, address _identitiesAdd) public {
+    function Identity(string _userId, string _name, address _docsAdd, address _identitiesAdd) public {
+        userId = _userId;
         name = _name;
         owner = msg.sender;
         docsAdd = Documents(_docsAdd);

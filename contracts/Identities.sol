@@ -6,9 +6,20 @@ import './RBACIntf.sol';
 
 contract Identities is Ownable {
 
+    struct VerificationData {
+        address user;
+        address identity;
+        uint256 blockTimestamp;
+    }
 
     // Mapping of user address to identity
     mapping(address => address) public identities;
+
+    mapping(address => address) public unverifiedIdentities;
+
+    VerificationData[] public requests;
+
+
 
     string constant ROLE_VERIFIED_IDENTITY = "verified";
 
@@ -31,8 +42,9 @@ contract Identities is Ownable {
     }
 
     event IdentityVerified(address verifier, address user, address identity);
-    event RoleAdded(address adder);
-    event RoleRemoved();
+    event IdentityVerificationRequested(address sender, address identity);
+    event RoleAdded(address admin, address user, string role);
+    event RoleRemoved(address admin, address user, string role);
 
     modifier onlyRole(string _role) {
         checkRole(msg.sender, _role);
@@ -45,12 +57,24 @@ contract Identities is Ownable {
     }
 
     function verifyIdentity(address user, address identity) public onlyAdmin {
-        require(NamedContract(identity).contractName() == IDENTITY);
         require(IdentityOwnership(identity).owner() == user);
         require(identities[user] == address(0));
 
         identities[user] = identity;
+        unverifiedIdentities[user] = address(0);
+        adminAddRole(user, ROLE_VERIFIED_IDENTITY);
         IdentityVerified(msg.sender, user, identity);
+    }
+
+    function reqIdnVerification(address identity) external {
+        require(identities[msg.sender] == address(0));
+        require(unverifiedIdentities[msg.sender] == address(0));
+        require(IdentityOwnership(identity).owner() == msg.sender);
+
+        requests.push(VerificationData(msg.sender, identity, block.timestamp));
+        unverifiedIdentities[msg.sender] = identity;
+
+        IdentityVerificationRequested(msg.sender, identity);
     }
 
 
@@ -58,16 +82,16 @@ contract Identities is Ownable {
         rbacAddress = RBACIntf(_rbacAddress);
     }
 
-    function checkVerifiedRole(address _identity) view public {
-        checkRole(_identity, ROLE_VERIFIED_IDENTITY);
+    function checkVerifiedRole(address addr) view public {
+        checkRole(addr, ROLE_VERIFIED_IDENTITY);
     }
 
-    function checkSignerRole(address _identity) view public {
-        checkRole(_identity, ROLE_DOCUMENT_SIGNER);
+    function checkSignerRole(address addr) view public {
+        checkRole(addr, ROLE_DOCUMENT_SIGNER);
     }
 
-    function checkCreatorRole(address _identity) view public {
-        checkRole(_identity, ROLE_DOCUMENT_CREATOR);
+    function checkCreatorRole(address addr) view public {
+        checkRole(addr, ROLE_DOCUMENT_CREATOR);
     }
 
 
@@ -79,15 +103,20 @@ contract Identities is Ownable {
         rbacAddress.checkRole(addr, roleName);
     }
 
-    function adminAddRole(address addr, string roleName) external onlyAdmin {
-        checkRole(addr, ROLE_VERIFIED_IDENTITY);
+    function adminAddRole(address addr, string roleName) public onlyAdmin {
+        require(identities[addr] != address(0));
 
         rbacAddress.adminAddRole(addr, roleName);
+
+        RoleAdded(msg.sender, addr, roleName);
+
     }
 
-    function adminRemoveRole(address addr, string roleName) external onlyAdmin {
+    function adminRemoveRole(address addr, string roleName) public onlyAdmin {
         require(ROLE_VERIFIED_IDENTITY_KCK != keccak256(roleName));
         rbacAddress.adminRemoveRole(addr, roleName);
+
+        RoleRemoved(msg.sender, addr, roleName);
     }
 
 

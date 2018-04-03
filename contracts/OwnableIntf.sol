@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-interface TransferableIntf {
+interface OwnableIntf {
     function transferOwnership(address newOwner) public;
 
 }
