@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/eldonhipolito/document-management-smc#readme",
   "dependencies": {
+    "truffle-contract": "^3.0.4",
     "zeppelin-solidity": "1.7.0"
   }
 }

@@ -6,5 +6,4 @@ interface SignableDocument {
 
     function addSigner(address signer) external;
 
-
 }
