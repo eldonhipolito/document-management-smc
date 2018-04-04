@@ -48,19 +48,33 @@ contract Identities is Ownable, RBAC {
 
 
     function verifyIdentity(address user, address identity) public onlyAdmin {
-        require(IdentityOwnership(identity).owner() == user);
+        require(Ownable(identity).owner() == user);
         require(identities[user] == address(0));
 
         identities[user] = identity;
         unverifiedIdentities[user] = address(0);
+        rmvUnverifiedIdn(user);
         adminAddRole(user, ROLE_VERIFIED_IDENTITY);
         IdentityVerified(msg.sender, user, identity);
+    }
+
+    function rmvUnverifiedIdn(address user) internal {
+        for(uint i = 0; i < requests.length; i++) {
+            if(requests[i].user == user) {
+                delete requests[i];
+                requests[i] = requests[requests.length - 1];
+                requests.length--;
+                return;
+            }
+        }
+        //Should not reach here...
+        assert(false);
     }
 
     function reqIdnVerification(address identity) external {
         require(identities[msg.sender] == address(0));
         require(unverifiedIdentities[msg.sender] == address(0));
-        require(IdentityOwnership(identity).owner() == msg.sender);
+        require(Ownable(identity).owner() == msg.sender);
 
         requests.push(VerificationData(msg.sender, identity, block.timestamp));
         unverifiedIdentities[msg.sender] = identity;
@@ -84,6 +98,3 @@ contract Identities is Ownable, RBAC {
 
 }
 
-interface IdentityOwnership {
-    function owner() public view returns (address);
-}
