@@ -4,7 +4,13 @@ import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
 import 'zeppelin-solidity/contracts/ownership/rbac/RBAC.sol';
 
+/**
+@title Identities
+@author Eldon Hipolito
+@dev This contract is used as a registry for identities, and acts as the role based access control.
+*/
 contract Identities is Ownable, RBAC {
+
 
     struct VerificationData {
         address user;
@@ -15,38 +21,36 @@ contract Identities is Ownable, RBAC {
     // Mapping of user address to identity
     mapping(address => address) public identities;
 
+    // Mapping of user address to identity
     mapping(address => address) public unverifiedIdentities;
 
+    // Requests for verification
     VerificationData[] public requests;
 
-
-
     string constant ROLE_VERIFIED_IDENTITY = "verified";
-
-    bytes32 constant ROLE_VERIFIED_IDENTITY_KCK = 0x24fb3e7553f72d287bbe4f5c584938a00a2f63bf3d7aa032d67d57f2d556a84d;
 
     string constant ROLE_DOCUMENT_SIGNER = "signer";
 
     string constant ROLE_DOCUMENT_CREATOR = "creator";
-
-    bytes32 constant ROLE_ADMIN_KCK = 0xf23ec0bb4210edd5cba85afd05127efcd2fc6a781bfed49188da1081670b22d8;
-
-
-    bytes32 constant IDENTITY = 0x377799b22fba826cf24c3f07e6731c67676765addcee33415a2c80d453d4ed6e;
 
     function Identities() public {
 
     }
 
     event IdentityVerified(address verifier, address user, address identity);
+
     event IdentityVerificationRequested(address sender, address identity);
+
     event RoleAdded(address admin, address user, string role);
+
     event RoleRemoved(address admin, address user, string role);
 
 
-
-
-
+    /**
+        @dev Verifies an identity. Only accessible by an admin
+        @param user - address of the user
+        @param identity - identity of the user
+    */
     function verifyIdentity(address user, address identity) public onlyAdmin {
         require(Ownable(identity).owner() == user);
         require(identities[user] == address(0));
@@ -58,6 +62,10 @@ contract Identities is Ownable, RBAC {
         IdentityVerified(msg.sender, user, identity);
     }
 
+    /**
+        @dev Removes the unverified identity from the requests.
+        @param user - address of the user
+    */
     function rmvUnverifiedIdn(address user) internal {
         for(uint i = 0; i < requests.length; i++) {
             if(requests[i].user == user) {
@@ -71,6 +79,11 @@ contract Identities is Ownable, RBAC {
         assert(false);
     }
 
+    /**
+        @dev Verifies an identity. Only accessible by an admin
+        @param user - address of the user
+        @param identity - identity of the user
+    */
     function reqIdnVerification(address identity) external {
         require(identities[msg.sender] == address(0));
         require(unverifiedIdentities[msg.sender] == address(0));
@@ -83,14 +96,24 @@ contract Identities is Ownable, RBAC {
     }
 
 
+    /**
+    @dev Will check if addr has verified role. Throws when false
+    @param addr - address of the user
+    */
     function checkVerifiedRole(address addr) view public {
         checkRole(addr, ROLE_VERIFIED_IDENTITY);
     }
-
+    /**
+    @dev Will check if addr has signer role. Throws when false
+    @param addr - address of the user
+    */
     function checkSignerRole(address addr) view public {
         checkRole(addr, ROLE_DOCUMENT_SIGNER);
     }
-
+    /**
+    @dev Will check if addr has creator role. Throws when false
+    @param addr - address of the user
+    */
     function checkCreatorRole(address addr) view public {
         checkRole(addr, ROLE_DOCUMENT_CREATOR);
     }
