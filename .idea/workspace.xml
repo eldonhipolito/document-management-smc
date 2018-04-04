@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b82d5216-d1d0-4572-bf0e-7539a4b52f5e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/build/contracts/Document.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Documents.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/ECRecovery.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Identities.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/IdentitiesIntf.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Identity.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/IdentityOwnership.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Ownable.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/OwnableIntf.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/RBAC.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Roles.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/SelfSignatureVerifiable.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/SignableDocument.json" afterPath="" />
       <change beforePath="$PROJECT_DIR$/contracts/Identities.sol" afterPath="$PROJECT_DIR$/contracts/Identities.sol" />
-      <change beforePath="$PROJECT_DIR$/test/Identities.js" afterPath="$PROJECT_DIR$/test/Identities.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +16,8 @@
       <file leaf-file-name="Identities.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/Identities.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+            <state relative-caret-position="1564">
+              <caret line="113" column="39" lean-forward="false" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -41,7 +26,7 @@
       <file leaf-file-name="RBAC.sol" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/ownership/rbac/RBAC.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-825">
+            <state relative-caret-position="-85">
               <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
               <folding />
             </state>
@@ -53,16 +38,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RBACMock.sol" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/mocks/RBACMock.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -132,6 +107,8 @@
       <find>docFadAdd</find>
       <find>ECRecovery</find>
       <find>owner</find>
+      <find>ROLE_VERIFIED_IDENTITY_KCK</find>
+      <find>ROLE_ADMIN_KCK</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -781,34 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/ownership/Ownable.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/Identity.sol">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/mocks/RBACMock.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/ownership/rbac/RBAC.sol">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -821,10 +774,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/mocks/RBACMock.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/ownership/Ownable.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/zeppelin-solidity/contracts/ownership/rbac/RBAC.sol">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/Identities.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+        <state relative-caret-position="1564">
+          <caret line="113" column="39" lean-forward="false" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
           <folding />
         </state>
       </provider>
