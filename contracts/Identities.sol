@@ -33,6 +33,9 @@ contract Identities is Ownable, RBAC {
 
     string constant ROLE_DOCUMENT_CREATOR = "creator";
 
+    /**
+    @dev ctor
+    */
     function Identities() public {
 
     }
@@ -80,8 +83,7 @@ contract Identities is Ownable, RBAC {
     }
 
     /**
-        @dev Verifies an identity. Only accessible by an admin
-        @param user - address of the user
+        @dev Requests identity verification.
         @param identity - identity of the user
     */
     function reqIdnVerification(address identity) external {
