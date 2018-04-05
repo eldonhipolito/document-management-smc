@@ -20,7 +20,7 @@ contract('Identities', async (accounts) => {
         idns = await Identities.new({from : accounts[0]});
         docs = await Documents.new(idns.address, {from : accounts[0]});
         Identity.link("ECRecovery", ecr.address);
-        idn = await Identity.new("eldon123", "Eldon", docs.address, idns.address, {from : accounts[0]});
+        idn = await Identity.new("eldon123", "Eldon", {from : accounts[0]});
 
         await idns.reqIdnVerification(idn.address);
 
@@ -51,7 +51,7 @@ contract('Identities', async (accounts) => {
        })
 
     it("Account[1] should be able to request identity verification", async () => {
-        idn = await await Identity.new("account2", "Eldon2", docs.address, idns.address, {from : accounts[1]});
+        idn = await await Identity.new("account2", "Eldon2", {from : accounts[1]});
 
         await idns.reqIdnVerification(idn.address, {from : accounts[1]});
 
