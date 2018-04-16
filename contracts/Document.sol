@@ -2,12 +2,16 @@ pragma solidity ^0.4.18;
 
 import './SignableDocument.sol';
 
-import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
+import './CustomOwnership.sol';
+
+import 'zeppelin-solidity/contracts/ECRecovery.sol';
 
 import './SelfSignatureVerifiable.sol';
 
+import './IdentitiesIntf.sol';
 
-contract Document is Ownable, SignableDocument {
+
+contract Document is CustomOwnership, SignableDocument {
 
     struct Signatory {
         address signer;
@@ -26,19 +30,24 @@ contract Document is Ownable, SignableDocument {
 
     Signatory[] public signatures;
 
+    IdentitiesIntf public identitiesAdd;
+
     event DocumentSigned(address docAddress, address signer, uint totalSigned, uint signersCount);
 
     event SignerAdded(address docAddress, address owner, address signer, uint signersCount);
 
 
-    function Document(uint256 _id, string _docName, bytes32 _checksum, address _owner) public {
+    function Document(uint256 _id, string _docName, bytes32 _checksum, address _owner, address _identitiesAdd) public {
         id = _id;
         docName = _docName;
         checksum = _checksum;
         owner = _owner;
+        identitiesAdd = IdentitiesIntf(_identitiesAdd);
     }
 
     function addSigner(address signer) external onlyOwner {
+        identitiesAdd.checkVerifiedRole(signer);
+        identitiesAdd.checkSignerRole(signer);
         uint length = signers.push(signer);
 
         SignerAdded(address(this), msg.sender, signer, length);
@@ -47,7 +56,7 @@ contract Document is Ownable, SignableDocument {
     function sign(bytes32 hash, bytes sig) external {
         require(isSigner(msg.sender));
         require(!hasSigned(msg.sender));
-        require(SelfSignatureVerifiable(msg.sender).isOwnSignature(hash, sig));
+        require(ECRecovery.recover(hash, sig) == msg.sender);
 
         uint totalSigned = signatures.push(Signatory(msg.sender, hash, sig));
 
