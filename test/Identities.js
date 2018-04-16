@@ -17,6 +17,7 @@ contract('Identities', async (accounts) => {
 
     it("Account[0] should be able to request Self Identity verification", async () => {
         ecr = await ECRec.deployed();
+        Documents.link("ECRecovery", ecr.address);
         idns = await Identities.new({from : accounts[0]});
         docs = await Documents.new(idns.address, {from : accounts[0]});
         Identity.link("ECRecovery", ecr.address);
