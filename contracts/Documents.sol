@@ -32,7 +32,7 @@ contract Documents is Ownable {
     function createDocument(string _docName, bytes32 _checksum) external {
         identitiesAdd.checkCreatorRole(msg.sender);
         count++;
-        address doc = new Document(count, _docName, _checksum, msg.sender);
+        address doc = new Document(count, _docName, _checksum, msg.sender, address(identitiesAdd));
         documents[count] = doc;
         documentOwnership[msg.sender].push(count);
 
