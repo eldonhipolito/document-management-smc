@@ -9,14 +9,13 @@ var ECRecovery = artifacts.require("zeppelin-solidity/contracts/ECRecovery.sol")
 var RBAC = artifacts.require("zeppelin-solidity/contracts/ownership/rbac/RBAC.sol");
 
 
-module.exports = function(deployer) {
+module.exports = function(deployer, network, accounts) {
   deployer.deploy(Migrations);
   deployer.deploy(ECRecovery);
 
-  deployer.deploy(RBAC).then(function() {
-    deployer.deploy(Identities, RBAC.address).then(function(){
-        deployer.deploy(Documents, Identities.address);
-    });
-  });
+    deployer.deploy(Identities, {from : accounts[0]}).then(function(){
 
+        deployer.link(ECRecovery, Documents);
+        deployer.deploy(Documents, Identities.address, {from : accounts[0]});
+    });
 };
