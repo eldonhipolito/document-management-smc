@@ -147,7 +147,7 @@
       "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/IdentitiesIntf.sol",
       "exportedSymbols": {
         "IdentitiesIntf": [
-          939
+          974
         ]
       }
     },
@@ -161,7 +161,7 @@
             ".18"
           ]
         },
-        "id": 888,
+        "id": 923,
         "name": "PragmaDirective",
         "src": "0:24:4"
       },
@@ -177,10 +177,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            939
+            974
           ],
           "name": "IdentitiesIntf",
-          "scope": 940
+          "scope": 975
         },
         "children": [
           {
@@ -194,7 +194,7 @@
               ],
               "name": "identities",
               "payable": false,
-              "scope": 939,
+              "scope": 974,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -206,459 +206,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_address",
-                      "scope": 895,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 889,
-                        "name": "ElementaryTypeName",
-                        "src": "149:7:4"
-                      }
-                    ],
-                    "id": 890,
-                    "name": "VariableDeclaration",
-                    "src": "149:16:4"
-                  }
-                ],
-                "id": 891,
-                "name": "ParameterList",
-                "src": "148:18:4"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 895,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 892,
-                        "name": "ElementaryTypeName",
-                        "src": "188:7:4"
-                      }
-                    ],
-                    "id": 893,
-                    "name": "VariableDeclaration",
-                    "src": "188:7:4"
-                  }
-                ],
-                "id": 894,
-                "name": "ParameterList",
-                "src": "187:9:4"
-              }
-            ],
-            "id": 895,
-            "name": "FunctionDefinition",
-            "src": "129:68:4"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "constant": false,
-              "implemented": false,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "verifyIdentity",
-              "payable": false,
-              "scope": 939,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "user",
-                      "scope": 902,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 896,
-                        "name": "ElementaryTypeName",
-                        "src": "229:7:4"
-                      }
-                    ],
-                    "id": 897,
-                    "name": "VariableDeclaration",
-                    "src": "229:12:4"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "identity",
-                      "scope": 902,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 898,
-                        "name": "ElementaryTypeName",
-                        "src": "243:7:4"
-                      }
-                    ],
-                    "id": 899,
-                    "name": "VariableDeclaration",
-                    "src": "243:16:4"
-                  }
-                ],
-                "id": 900,
-                "name": "ParameterList",
-                "src": "228:32:4"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 901,
-                "name": "ParameterList",
-                "src": "267:0:4"
-              }
-            ],
-            "id": 902,
-            "name": "FunctionDefinition",
-            "src": "205:63:4"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "constant": false,
-              "implemented": false,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "setRBACAddress",
-              "payable": false,
-              "scope": 939,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_rbacAddress",
-                      "scope": 907,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 903,
-                        "name": "ElementaryTypeName",
-                        "src": "300:7:4"
-                      }
-                    ],
-                    "id": 904,
-                    "name": "VariableDeclaration",
-                    "src": "300:20:4"
-                  }
-                ],
-                "id": 905,
-                "name": "ParameterList",
-                "src": "299:22:4"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 906,
-                "name": "ParameterList",
-                "src": "328:0:4"
-              }
-            ],
-            "id": 907,
-            "name": "FunctionDefinition",
-            "src": "276:53:4"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "constant": true,
-              "implemented": false,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "hasRole",
-              "payable": false,
-              "scope": 939,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "addr",
-                      "scope": 916,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 908,
-                        "name": "ElementaryTypeName",
-                        "src": "354:7:4"
-                      }
-                    ],
-                    "id": 909,
-                    "name": "VariableDeclaration",
-                    "src": "354:12:4"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "roleName",
-                      "scope": 916,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "string memory",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string storage pointer"
-                        },
-                        "id": 910,
-                        "name": "ElementaryTypeName",
-                        "src": "368:6:4"
-                      }
-                    ],
-                    "id": 911,
-                    "name": "VariableDeclaration",
-                    "src": "368:15:4"
-                  }
-                ],
-                "id": 912,
-                "name": "ParameterList",
-                "src": "353:31:4"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 916,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "bool",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "bool",
-                          "type": "bool"
-                        },
-                        "id": 913,
-                        "name": "ElementaryTypeName",
-                        "src": "406:4:4"
-                      }
-                    ],
-                    "id": 914,
-                    "name": "VariableDeclaration",
-                    "src": "406:4:4"
-                  }
-                ],
-                "id": 915,
-                "name": "ParameterList",
-                "src": "405:6:4"
-              }
-            ],
-            "id": 916,
-            "name": "FunctionDefinition",
-            "src": "337:75:4"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "constant": true,
-              "implemented": false,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "checkRole",
-              "payable": false,
-              "scope": 939,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "addr",
-                      "scope": 923,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "type": "address"
-                        },
-                        "id": 917,
-                        "name": "ElementaryTypeName",
-                        "src": "439:7:4"
-                      }
-                    ],
-                    "id": 918,
-                    "name": "VariableDeclaration",
-                    "src": "439:12:4"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "roleName",
-                      "scope": 923,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "string memory",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "string",
-                          "type": "string storage pointer"
-                        },
-                        "id": 919,
-                        "name": "ElementaryTypeName",
-                        "src": "453:6:4"
-                      }
-                    ],
-                    "id": 920,
-                    "name": "VariableDeclaration",
-                    "src": "453:15:4"
-                  }
-                ],
-                "id": 921,
-                "name": "ParameterList",
-                "src": "438:31:4"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 922,
-                "name": "ParameterList",
-                "src": "481:0:4"
-              }
-            ],
-            "id": 923,
-            "name": "FunctionDefinition",
-            "src": "420:62:4"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "constant": true,
-              "implemented": false,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "checkVerifiedRole",
-              "payable": false,
-              "scope": 939,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "addr",
-                      "scope": 928,
+                      "scope": 930,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -673,15 +221,467 @@
                         },
                         "id": 924,
                         "name": "ElementaryTypeName",
-                        "src": "517:7:4"
+                        "src": "149:7:4"
                       }
                     ],
                     "id": 925,
                     "name": "VariableDeclaration",
-                    "src": "517:12:4"
+                    "src": "149:16:4"
                   }
                 ],
                 "id": 926,
+                "name": "ParameterList",
+                "src": "148:18:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 930,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 927,
+                        "name": "ElementaryTypeName",
+                        "src": "188:7:4"
+                      }
+                    ],
+                    "id": 928,
+                    "name": "VariableDeclaration",
+                    "src": "188:7:4"
+                  }
+                ],
+                "id": 929,
+                "name": "ParameterList",
+                "src": "187:9:4"
+              }
+            ],
+            "id": 930,
+            "name": "FunctionDefinition",
+            "src": "129:68:4"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "verifyIdentity",
+              "payable": false,
+              "scope": 974,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "user",
+                      "scope": 937,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 931,
+                        "name": "ElementaryTypeName",
+                        "src": "229:7:4"
+                      }
+                    ],
+                    "id": 932,
+                    "name": "VariableDeclaration",
+                    "src": "229:12:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "identity",
+                      "scope": 937,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 933,
+                        "name": "ElementaryTypeName",
+                        "src": "243:7:4"
+                      }
+                    ],
+                    "id": 934,
+                    "name": "VariableDeclaration",
+                    "src": "243:16:4"
+                  }
+                ],
+                "id": 935,
+                "name": "ParameterList",
+                "src": "228:32:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 936,
+                "name": "ParameterList",
+                "src": "267:0:4"
+              }
+            ],
+            "id": 937,
+            "name": "FunctionDefinition",
+            "src": "205:63:4"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "setRBACAddress",
+              "payable": false,
+              "scope": 974,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_rbacAddress",
+                      "scope": 942,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 938,
+                        "name": "ElementaryTypeName",
+                        "src": "300:7:4"
+                      }
+                    ],
+                    "id": 939,
+                    "name": "VariableDeclaration",
+                    "src": "300:20:4"
+                  }
+                ],
+                "id": 940,
+                "name": "ParameterList",
+                "src": "299:22:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 941,
+                "name": "ParameterList",
+                "src": "328:0:4"
+              }
+            ],
+            "id": 942,
+            "name": "FunctionDefinition",
+            "src": "276:53:4"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "hasRole",
+              "payable": false,
+              "scope": 974,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "addr",
+                      "scope": 951,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 943,
+                        "name": "ElementaryTypeName",
+                        "src": "354:7:4"
+                      }
+                    ],
+                    "id": 944,
+                    "name": "VariableDeclaration",
+                    "src": "354:12:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "roleName",
+                      "scope": 951,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 945,
+                        "name": "ElementaryTypeName",
+                        "src": "368:6:4"
+                      }
+                    ],
+                    "id": 946,
+                    "name": "VariableDeclaration",
+                    "src": "368:15:4"
+                  }
+                ],
+                "id": 947,
+                "name": "ParameterList",
+                "src": "353:31:4"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 951,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 948,
+                        "name": "ElementaryTypeName",
+                        "src": "406:4:4"
+                      }
+                    ],
+                    "id": 949,
+                    "name": "VariableDeclaration",
+                    "src": "406:4:4"
+                  }
+                ],
+                "id": 950,
+                "name": "ParameterList",
+                "src": "405:6:4"
+              }
+            ],
+            "id": 951,
+            "name": "FunctionDefinition",
+            "src": "337:75:4"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "checkRole",
+              "payable": false,
+              "scope": 974,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "addr",
+                      "scope": 958,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 952,
+                        "name": "ElementaryTypeName",
+                        "src": "439:7:4"
+                      }
+                    ],
+                    "id": 953,
+                    "name": "VariableDeclaration",
+                    "src": "439:12:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "roleName",
+                      "scope": 958,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 954,
+                        "name": "ElementaryTypeName",
+                        "src": "453:6:4"
+                      }
+                    ],
+                    "id": 955,
+                    "name": "VariableDeclaration",
+                    "src": "453:15:4"
+                  }
+                ],
+                "id": 956,
+                "name": "ParameterList",
+                "src": "438:31:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 957,
+                "name": "ParameterList",
+                "src": "481:0:4"
+              }
+            ],
+            "id": 958,
+            "name": "FunctionDefinition",
+            "src": "420:62:4"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "checkVerifiedRole",
+              "payable": false,
+              "scope": 974,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "addr",
+                      "scope": 963,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 959,
+                        "name": "ElementaryTypeName",
+                        "src": "517:7:4"
+                      }
+                    ],
+                    "id": 960,
+                    "name": "VariableDeclaration",
+                    "src": "517:12:4"
+                  }
+                ],
+                "id": 961,
                 "name": "ParameterList",
                 "src": "516:14:4"
               },
@@ -692,12 +692,12 @@
                   ]
                 },
                 "children": [],
-                "id": 927,
+                "id": 962,
                 "name": "ParameterList",
                 "src": "542:0:4"
               }
             ],
-            "id": 928,
+            "id": 963,
             "name": "FunctionDefinition",
             "src": "490:53:4"
           },
@@ -712,7 +712,7 @@
               ],
               "name": "checkSignerRole",
               "payable": false,
-              "scope": 939,
+              "scope": 974,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -724,7 +724,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "addr",
-                      "scope": 933,
+                      "scope": 968,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -737,17 +737,17 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 929,
+                        "id": 964,
                         "name": "ElementaryTypeName",
                         "src": "576:7:4"
                       }
                     ],
-                    "id": 930,
+                    "id": 965,
                     "name": "VariableDeclaration",
                     "src": "576:12:4"
                   }
                 ],
-                "id": 931,
+                "id": 966,
                 "name": "ParameterList",
                 "src": "575:14:4"
               },
@@ -758,12 +758,12 @@
                   ]
                 },
                 "children": [],
-                "id": 932,
+                "id": 967,
                 "name": "ParameterList",
                 "src": "601:0:4"
               }
             ],
-            "id": 933,
+            "id": 968,
             "name": "FunctionDefinition",
             "src": "551:51:4"
           },
@@ -778,7 +778,7 @@
               ],
               "name": "checkCreatorRole",
               "payable": false,
-              "scope": 939,
+              "scope": 974,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -790,7 +790,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "addr",
-                      "scope": 938,
+                      "scope": 973,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -803,17 +803,17 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 934,
+                        "id": 969,
                         "name": "ElementaryTypeName",
                         "src": "636:7:4"
                       }
                     ],
-                    "id": 935,
+                    "id": 970,
                     "name": "VariableDeclaration",
                     "src": "636:12:4"
                   }
                 ],
-                "id": 936,
+                "id": 971,
                 "name": "ParameterList",
                 "src": "635:14:4"
               },
@@ -824,22 +824,22 @@
                   ]
                 },
                 "children": [],
-                "id": 937,
+                "id": 972,
                 "name": "ParameterList",
                 "src": "661:0:4"
               }
             ],
-            "id": 938,
+            "id": 973,
             "name": "FunctionDefinition",
             "src": "610:52:4"
           }
         ],
-        "id": 939,
+        "id": 974,
         "name": "ContractDefinition",
         "src": "95:572:4"
       }
     ],
-    "id": 940,
+    "id": 975,
     "name": "SourceUnit",
     "src": "0:669:4"
   },
@@ -849,5 +849,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-25T06:41:07.036Z"
+  "updatedAt": "2018-04-27T05:09:46.765Z"
 }

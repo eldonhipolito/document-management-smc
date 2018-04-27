@@ -3,11 +3,23 @@ $(function(){
     $("#registration").submit(function(e){
         e.preventDefault();
 
-        let username = $("#username").val();
+        let username = $("#r_username").val();
         let name = $("#name").val();
+        let idnContract = web3.eth.contract(App.contractTemplates.Identity.abi);
+        /*
+        idnContract.new(username, name, {from: accounts[0]}, function(err, newCon){
+            if(!err) {
+
+
+            }
+
+        });
+        */
 
         App.contractTemplates.Identity.new(username, name).then(function(result){
-            console.log(result);
+            console.log("Here!!");
+            $("#regAddress").css("display","block");
+            $("#regAddress").text(result.address);
         });
 
     });
@@ -20,6 +32,7 @@ $(function(){
 
             App.contractInstances.Identities.reqIdnVerification(idnAddress).then(function(result){
                 console.log(result);
+
             });
 
         });

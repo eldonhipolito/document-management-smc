@@ -268,7 +268,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1237,
+          "SourceUnit": 1272,
           "absolutePath": "zeppelin-solidity/contracts/ownership/Ownable.sol",
           "file": "zeppelin-solidity/contracts/ownership/Ownable.sol",
           "scope": 607,
@@ -283,7 +283,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 940,
+          "SourceUnit": 975,
           "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/IdentitiesIntf.sol",
           "file": "./IdentitiesIntf.sol",
           "scope": 607,
@@ -298,7 +298,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1089,
+          "SourceUnit": 1124,
           "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/OwnableIntf.sol",
           "file": "./OwnableIntf.sol",
           "scope": 607,
@@ -315,14 +315,14 @@
         "attributes": {
           "contractDependencies": [
             347,
-            1236
+            1271
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             606,
-            1236
+            1271
           ],
           "name": "Documents",
           "scope": 607
@@ -339,7 +339,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Ownable",
-                  "referencedDeclaration": 1236,
+                  "referencedDeclaration": 1271,
                   "type": "contract Ownable"
                 },
                 "id": 354,
@@ -494,7 +494,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IdentitiesIntf",
-                  "referencedDeclaration": 939,
+                  "referencedDeclaration": 974,
                   "type": "contract IdentitiesIntf"
                 },
                 "id": 367,
@@ -819,7 +819,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 939,
+                                  "referencedDeclaration": 974,
                                   "type": "type(contract IdentitiesIntf)",
                                   "value": "IdentitiesIntf"
                                 },
@@ -984,7 +984,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "checkCreatorRole",
-                              "referencedDeclaration": 938,
+                              "referencedDeclaration": 973,
                               "type": "function (address) view external"
                             },
                             "children": [
@@ -1025,7 +1025,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1241,7 +1241,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1273,7 +1273,7 @@
                                 "attributes": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_IdentitiesIntf_$939",
+                                      "typeIdentifier": "t_contract$_IdentitiesIntf_$974",
                                       "typeString": "contract IdentitiesIntf"
                                     }
                                   ],
@@ -1473,7 +1473,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1478,
+                                          "referencedDeclaration": 1513,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -1610,7 +1610,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1759,7 +1759,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1481,
+                              "referencedDeclaration": 1516,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1999,7 +1999,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2050,7 +2050,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1481,
+                              "referencedDeclaration": 1516,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2166,7 +2166,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "checkCreatorRole",
-                              "referencedDeclaration": 938,
+                              "referencedDeclaration": 973,
                               "type": "function (address) view external"
                             },
                             "children": [
@@ -2342,7 +2342,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "transferOwnership",
-                              "referencedDeclaration": 1087,
+                              "referencedDeclaration": 1122,
                               "type": "function (address) external"
                             },
                             "children": [
@@ -2372,7 +2372,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1088,
+                                      "referencedDeclaration": 1123,
                                       "type": "type(contract OwnableIntf)",
                                       "value": "OwnableIntf"
                                     },
@@ -2533,7 +2533,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3313,7 +3313,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3701,7 +3701,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 1210,
+                      "referencedDeclaration": 1245,
                       "type": "modifier ()",
                       "value": "onlyOwner"
                     },
@@ -3769,7 +3769,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 939,
+                                  "referencedDeclaration": 974,
                                   "type": "type(contract IdentitiesIntf)",
                                   "value": "IdentitiesIntf"
                                 },
@@ -3831,25 +3831,25 @@
     "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
   },
   "networks": {
-    "1524638929081": {
+    "1524805799914": {
       "events": {},
       "links": {
-        "ECRecovery": "0x3951ea4f5e640b8d036a59e249b1b1ba6f4acbd4"
+        "ECRecovery": "0x09ad2c01b0f780d3f5b40560c7f959a6be0aa64f"
       }
     },
-    "1524709814315": {
+    "1524806395101": {
       "events": {},
       "links": {
-        "ECRecovery": "0xbd88b6c0c91b0d2db9560f4705dba667c139d9bc"
+        "ECRecovery": "0x10eef530b72bb8a085fc1adbe96395ee899c4de6"
       }
     },
-    "1524722177997": {
+    "1524809538255": {
       "events": {},
       "links": {
-        "ECRecovery": "0x745c1f6ec92c1f1d6f691d7f7e8931c953a69f01"
+        "ECRecovery": "0x667fc816ab3969b5b64427be33e3422b936ff6f8"
       }
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-26T05:56:28.430Z"
+  "updatedAt": "2018-04-27T06:12:34.461Z"
 }

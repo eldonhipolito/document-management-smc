@@ -338,7 +338,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1116,
+          "SourceUnit": 1151,
           "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SignableDocument.sol",
           "file": "./SignableDocument.sol",
           "scope": 348,
@@ -368,7 +368,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1181,
+          "SourceUnit": 1216,
           "absolutePath": "zeppelin-solidity/contracts/ECRecovery.sol",
           "file": "zeppelin-solidity/contracts/ECRecovery.sol",
           "scope": 348,
@@ -383,7 +383,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 1101,
+          "SourceUnit": 1136,
           "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SelfSignatureVerifiable.sol",
           "file": "./SelfSignatureVerifiable.sol",
           "scope": 348,
@@ -398,7 +398,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 940,
+          "SourceUnit": 975,
           "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/IdentitiesIntf.sol",
           "file": "./IdentitiesIntf.sol",
           "scope": 348,
@@ -415,14 +415,14 @@
         "attributes": {
           "contractDependencies": [
             99,
-            1115
+            1150
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             347,
-            1115,
+            1150,
             99
           ],
           "name": "Document",
@@ -463,7 +463,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SignableDocument",
-                  "referencedDeclaration": 1115,
+                  "referencedDeclaration": 1150,
                   "type": "contract SignableDocument"
                 },
                 "id": 109,
@@ -736,7 +736,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "IdentitiesIntf",
-                  "referencedDeclaration": 939,
+                  "referencedDeclaration": 974,
                   "type": "contract IdentitiesIntf"
                 },
                 "id": 130,
@@ -1423,7 +1423,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 939,
+                                  "referencedDeclaration": 974,
                                   "type": "type(contract IdentitiesIntf)",
                                   "value": "IdentitiesIntf"
                                 },
@@ -1479,7 +1479,7 @@
               "payable": false,
               "scope": 347,
               "stateMutability": "nonpayable",
-              "superFunction": 1114,
+              "superFunction": 1149,
               "visibility": "external"
             },
             "children": [
@@ -1585,7 +1585,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "checkVerifiedRole",
-                              "referencedDeclaration": 928,
+                              "referencedDeclaration": 963,
                               "type": "function (address) view external"
                             },
                             "children": [
@@ -1662,7 +1662,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "checkSignerRole",
-                              "referencedDeclaration": 933,
+                              "referencedDeclaration": 968,
                               "type": "function (address) view external"
                             },
                             "children": [
@@ -1905,7 +1905,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1499,
+                                  "referencedDeclaration": 1534,
                                   "type": "contract Document",
                                   "value": "this"
                                 },
@@ -1936,7 +1936,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2009,7 +2009,7 @@
               "payable": false,
               "scope": 347,
               "stateMutability": "nonpayable",
-              "superFunction": 1109,
+              "superFunction": 1144,
               "visibility": "external"
             },
             "children": [
@@ -2113,7 +2113,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1481,
+                              "referencedDeclaration": 1516,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2173,7 +2173,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1478,
+                                      "referencedDeclaration": 1513,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2229,7 +2229,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1481,
+                              "referencedDeclaration": 1516,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2301,7 +2301,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1478,
+                                          "referencedDeclaration": 1513,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -2362,7 +2362,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1481,
+                              "referencedDeclaration": 1516,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2417,7 +2417,7 @@
                                       "isPure": false,
                                       "lValueRequested": false,
                                       "member_name": "recover",
-                                      "referencedDeclaration": 1179,
+                                      "referencedDeclaration": 1214,
                                       "type": "function (bytes32,bytes memory) pure returns (address)"
                                     },
                                     "children": [
@@ -2427,7 +2427,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 1180,
+                                          "referencedDeclaration": 1215,
                                           "type": "type(library ECRecovery)",
                                           "value": "ECRecovery"
                                         },
@@ -2491,7 +2491,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1478,
+                                      "referencedDeclaration": 1513,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2663,7 +2663,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1478,
+                                      "referencedDeclaration": 1513,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2807,7 +2807,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1499,
+                                  "referencedDeclaration": 1534,
                                   "type": "contract Document",
                                   "value": "this"
                                 },
@@ -2838,7 +2838,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 1478,
+                                  "referencedDeclaration": 1513,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3777,5 +3777,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-25T06:41:07.036Z"
+  "updatedAt": "2018-04-27T05:09:46.749Z"
 }
