@@ -3,6 +3,7 @@ App = {
     contractAddresses : {},
     contractInstances : {},
     web3Provider : null,
+    loaded : false,
 
     load : function() {
         return App.initWeb3();
@@ -48,33 +49,49 @@ App = {
 
      loadContractAddresses : function() {
         $.getJSON("../addresses.json", function(data) {
-            console.log(data);
             App.contractAddresses = data;
              return App.loadContractInstances();
         });
 
      },
      loadContractInstances : function() {
-        console.log(App.contractTemplates.ECRecovery);
-        App.contractTemplates.ECRecovery.at(App.contractAddresses.ecrecovery).then(function(instance) {
-            App.contractInstances.ECRecovery = instance;
-        });
-        App.contractTemplates.Documents.at(App.contractAddresses.documents).then(function(instance){
-            App.contractInstances.Documents = instance;
-        });
-        App.contractTemplates.Identities.at(App.contractAddresses.identities).then(function(instance){
-            App.contractInstances.Identities = instance;
-        });
 
-        return App.linkContracts();
+       let ecInstance =  App.contractTemplates.ECRecovery.at(App.contractAddresses.ecrecovery);
+        let docsInstance = App.contractTemplates.Documents.at(App.contractAddresses.documents);
+        let idnsInstance = App.contractTemplates.Identities.at(App.contractAddresses.identities);
+
+        $.when(ecInstance, docsInstance, idnsInstance).then(function(){
+            console.log("Contract instances loaded");
+            App.contractInstances.ECRecovery = ecInstance;
+            App.contractInstances.Documents = docsInstance;
+            App.contractInstances.Identities = idnsInstance;
+            return App.linkContracts();
+        });
      },
 
      linkContracts : function() {
         App.contractTemplates.Identity.detectNetwork().then(function(){
             App.contractTemplates.Identity.link("ECRecovery", App.contractAddresses.ecrecovery);
+
+            App.loaded = true;
         });
+     },
+
+     poll : async function(callback) {
+
+                while(!App.loaded) {
+                    await sleep(1000);
+                }
+           callback();
      }
 };
+
+
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 

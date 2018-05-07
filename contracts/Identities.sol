@@ -97,6 +97,14 @@ contract Identities is Ownable, RBAC {
         IdentityVerificationRequested(msg.sender, identity);
     }
 
+    function singleVerRequest(uint ndx) external view returns(address, address, uint256) {
+        return (requests[ndx].user, requests[ndx].identity, requests[ndx].blockTimestamp);
+    }
+
+    function requestsCount() external view returns(uint) {
+        return requests.length;
+    }
+
 
     /**
     @dev Will check if addr has verified role. Throws when false

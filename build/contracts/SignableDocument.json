@@ -45,7 +45,7 @@
       "absolutePath": "/C/Users/User.Admin/Desktop/sol-workspace/document-management-smc/contracts/SignableDocument.sol",
       "exportedSymbols": {
         "SignableDocument": [
-          1115
+          1150
         ]
       }
     },
@@ -59,7 +59,7 @@
             ".18"
           ]
         },
-        "id": 1102,
+        "id": 1137,
         "name": "PragmaDirective",
         "src": "0:24:9"
       },
@@ -75,10 +75,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            1115
+            1150
           ],
           "name": "SignableDocument",
-          "scope": 1116
+          "scope": 1151
         },
         "children": [
           {
@@ -92,7 +92,7 @@
               ],
               "name": "sign",
               "payable": false,
-              "scope": 1115,
+              "scope": 1150,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -104,7 +104,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "hash",
-                      "scope": 1109,
+                      "scope": 1144,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -117,12 +117,12 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 1103,
+                        "id": 1138,
                         "name": "ElementaryTypeName",
                         "src": "78:7:9"
                       }
                     ],
-                    "id": 1104,
+                    "id": 1139,
                     "name": "VariableDeclaration",
                     "src": "78:12:9"
                   },
@@ -130,7 +130,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "sig",
-                      "scope": 1109,
+                      "scope": 1144,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes calldata",
@@ -143,17 +143,17 @@
                           "name": "bytes",
                           "type": "bytes storage pointer"
                         },
-                        "id": 1105,
+                        "id": 1140,
                         "name": "ElementaryTypeName",
                         "src": "92:5:9"
                       }
                     ],
-                    "id": 1106,
+                    "id": 1141,
                     "name": "VariableDeclaration",
                     "src": "92:9:9"
                   }
                 ],
-                "id": 1107,
+                "id": 1142,
                 "name": "ParameterList",
                 "src": "77:25:9"
               },
@@ -164,12 +164,12 @@
                   ]
                 },
                 "children": [],
-                "id": 1108,
+                "id": 1143,
                 "name": "ParameterList",
                 "src": "111:0:9"
               }
             ],
-            "id": 1109,
+            "id": 1144,
             "name": "FunctionDefinition",
             "src": "64:48:9"
           },
@@ -184,7 +184,7 @@
               ],
               "name": "addSigner",
               "payable": false,
-              "scope": 1115,
+              "scope": 1150,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -196,7 +196,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "signer",
-                      "scope": 1114,
+                      "scope": 1149,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -209,17 +209,17 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 1110,
+                        "id": 1145,
                         "name": "ElementaryTypeName",
                         "src": "139:7:9"
                       }
                     ],
-                    "id": 1111,
+                    "id": 1146,
                     "name": "VariableDeclaration",
                     "src": "139:14:9"
                   }
                 ],
-                "id": 1112,
+                "id": 1147,
                 "name": "ParameterList",
                 "src": "138:16:9"
               },
@@ -230,22 +230,22 @@
                   ]
                 },
                 "children": [],
-                "id": 1113,
+                "id": 1148,
                 "name": "ParameterList",
                 "src": "163:0:9"
               }
             ],
-            "id": 1114,
+            "id": 1149,
             "name": "FunctionDefinition",
             "src": "120:44:9"
           }
         ],
-        "id": 1115,
+        "id": 1150,
         "name": "ContractDefinition",
         "src": "28:141:9"
       }
     ],
-    "id": 1116,
+    "id": 1151,
     "name": "SourceUnit",
     "src": "0:171:9"
   },
@@ -255,5 +255,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-04-25T06:41:07.036Z"
+  "updatedAt": "2018-04-27T05:09:46.765Z"
 }
