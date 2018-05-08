@@ -31,7 +31,8 @@ $(function(){
             let idnAddress = $("#idnAddress").val();
 
             App.contractInstances.Identities.reqIdnVerification(idnAddress).then(function(result){
-                console.log(result);
+                $("#reqNotif").css("display","block");
+                $("#reqNotif").text("Identity verification requested. Your tx id : " + result.tx);
 
             });
 

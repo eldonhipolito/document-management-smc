@@ -18,6 +18,16 @@ $(function(){
             });
 
 
+$("#verTbody").on("click",".verifyBtn", function(){
+    let ndx = $(this).attr("id").charAt($(this).attr("id").length - 1);
+   let userAdd = $("#colUserAdd" + ndx).text();
+   let identity = $("#colIdn" + ndx).text();
+
+   App.contractInstances.Identities.verifyIdentity(userAdd, identity).then(function(result){
+        alert("identity verified!");
+   });
+
+});
 
 
 
@@ -34,7 +44,7 @@ idns.singleVerRequest(ndx).then(function(res){
 
                 inst.name.call().then(function(name){
                     let $row = $("<tr> </tr>");
-                    $row.append("<td>" + userId + "</td>").append("<td>" + name + "</td>").append("<td>" + identity + "</td>").append("<td>" + userAddress + "</td>");
+                    $row.append("<td>" + userId + "</td>").append("<td>" + name + "</td>").append("<td id='colIdn" + ndx + "'>" + identity + "</td>").append("<td id='colUserAdd" + ndx + "'>" + userAddress + "</td>").append("<td>" + "<button id='btnVerify" + ndx + "' class='verifyBtn btn btn-success'>Verify</button> </td>");
                     $("#verTbody").append($row);
                 });
 
